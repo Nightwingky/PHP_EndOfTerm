@@ -392,18 +392,20 @@
 <li><p>var_dump($array):&#x8F93;&#x51FA;&#x7C7B;&#x578B;+&#x503C;</p>
 </li>
 <li><p>&#x8868;&#x5355;</p>
+</li>
+</ul>
 <pre><code class="lang-php">&lt;form action = <span class="hljs-string">&quot;a.php&quot;</span> method = <span class="hljs-string">&quot;get&quot;</span>&gt;
-  &lt;input type = <span class="hljs-string">&quot;test&quot;</span> name = <span class="hljs-string">&quot;username&quot;</span>/&gt;
-  &lt;input type = <span class="hljs-string">&quot;password&quot;</span> name = <span class="hljs-string">&quot;pwd&quot;</span>/&gt;
-  &lt;input type = <span class="hljs-string">&quot;submit&quot;</span> name = <span class="hljs-string">&quot;submit&quot;</span> value = <span class="hljs-string">&quot;OK&quot;</span>/&gt;
+    &lt;input type = <span class="hljs-string">&quot;test&quot;</span> name = <span class="hljs-string">&quot;username&quot;</span>/&gt;
+    &lt;input type = <span class="hljs-string">&quot;password&quot;</span> name = <span class="hljs-string">&quot;pwd&quot;</span>/&gt;
+    &lt;input type = <span class="hljs-string">&quot;submit&quot;</span> name = <span class="hljs-string">&quot;submit&quot;</span> value = <span class="hljs-string">&quot;OK&quot;</span>/&gt;
 &lt;/form&gt;
 </code></pre>
 <pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
-  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;form action = &apos;a.php&apos; method = &apos;get&apos;&gt;&quot;</span>;
-  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;input type = &apos;test&apos; name = &apos;username&apos;/&gt;&quot;</span>;
-  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;input type = &apos;password&apos; name = &apos;pwd&apos;/&gt;&quot;</span>;
-  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;input type = &apos;submit&apos; name = &apos;submit&apos; value = &apos;OK&apos;/&gt;&quot;</span>;
-  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;/form&gt;&quot;</span>;
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;form action = &apos;a.php&apos; method = &apos;get&apos;&gt;&quot;</span>;
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;input type = &apos;test&apos; name = &apos;username&apos;/&gt;&quot;</span>;
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;input type = &apos;password&apos; name = &apos;pwd&apos;/&gt;&quot;</span>;
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;input type = &apos;submit&apos; name = &apos;submit&apos; value = &apos;OK&apos;/&gt;&quot;</span>;
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;/form&gt;&quot;</span>;
 <span class="hljs-meta">?&gt;</span>
 </code></pre>
 <ul>
@@ -413,37 +415,69 @@
 <li>value&#x5C5E;&#x6027;&#xFF1A;&#x6309;&#x94AE;&#x4E0A;&#x63D0;&#x793A;&#x4FE1;&#x606F;</li>
 <li>&#x70B9;&#x51FB;submit&#x65F6;&#xFF0C;&#x7F51;&#x9875;&#x53D1;&#x51FA;&#x8BF7;&#x6C42;&#xFF0C;&#x8BF7;&#x6C42;&#x7684;&#x7F51;&#x9875;&#x53D6;&#x51B3;&#x4E8E;action = &quot;&quot;&#x662F;&#x8C01;&#xFF0C;&#x7A7A;&#x767D;&#x8868;&#x793A;&#x81EA;&#x5DF1;</li>
 </ul>
-</li>
-</ul>
 <ul>
-<li><p>isset()&#x51FD;&#x6570;&#x662F;&#x5426;&#x6709;&#x503C;</p>
+<li>isset()&#x51FD;&#x6570;&#x662F;&#x5426;&#x6709;&#x503C;</li>
+</ul>
 <pre><code class="lang-php"><span class="hljs-keyword">if</span>(<span class="hljs-keyword">isset</span>($_GET[<span class="hljs-string">&quot;username&quot;</span>]))
 {...}
 </code></pre>
-</li>
+<ul>
 <li><p>ob_start()&#xFF1A;&#x6253;&#x5F00;&#x7F13;&#x51B2;&#x533A;<br>
 ob_clean()&#xFF1A;&#x5173;&#x95ED;&#x7F13;&#x51B2;&#x533A;</p>
 </li>
 <li><p>include&#x51FD;&#x6570;<br>
 &#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x6709;&#x4E00;&#x4E2A;&#x6587;&#x6863;a.msp/.txt</p>
+</li>
+</ul>
 <pre><code class="lang-php"><span class="hljs-keyword">include</span>(<span class="hljs-string">&quot;a.msp&quot;</span>);<span class="hljs-comment">//&#x5F15;&#x7528;&#x76EE;&#x5F55;&#x4E0B;&#x7684;a.php</span>
 </code></pre>
-</li>
-<li><p>.&#x8868;&#x793A;&#x5B57;&#x7B26;&#x4E32;&#x8FDE;&#x63A5;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;+</p>
+<ul>
+<li>.&#x8868;&#x793A;&#x5B57;&#x7B26;&#x4E32;&#x8FDE;&#x63A5;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;+</li>
+</ul>
 <pre><code class="lang-php">$a = <span class="hljs-string">&quot;a&quot;</span>.<span class="hljs-string">&quot;b&quot;</span>;
 <span class="hljs-keyword">echo</span> $a;
 <span class="hljs-comment">//&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;&quot;ab&quot;</span>
 </code></pre>
-</li>
-<li><p>?&#x4EE3;&#x8868;&#x503C;&#x7684;&#x4F20;&#x9012;&#xFF0C;&#x4EE5;get&#x65B9;&#x5F0F;&#x4F20;</p>
+<ul>
+<li>?&#x4EE3;&#x8868;&#x503C;&#x7684;&#x4F20;&#x9012;&#xFF0C;&#x4EE5;get&#x65B9;&#x5F0F;&#x4F20;</li>
+</ul>
 <pre><code class="lang-php">&lt;a href = <span class="hljs-string">&quot;get.php?tag=1&quot;</span>&gt;a&lt;/a&gt;
 </code></pre>
-</li>
-<li><p>@&#x8868;&#x793A;&#x6709;&#x9519;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;</p>
+<ul>
+<li>@&#x8868;&#x793A;&#x6709;&#x9519;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;</li>
+</ul>
 <pre><code class="lang-php">@$_GET[<span class="hljs-string">&quot;keywords&quot;</span>];
 </code></pre>
-</li>
+<h6 id="php&#x9875;&#x9762;&#x8DF3;&#x8F6C;">PHP&#x9875;&#x9762;&#x8DF3;&#x8F6C;</h6>
+<ul>
+<li>&#x4F7F;&#x7528;PHP&#x81EA;&#x5E26;&#x51FD;&#x6570; </li>
 </ul>
+<pre><code class="lang-php">Header(<span class="hljs-string">&quot;Location: &#x7F51;&#x5740; &quot;</span>); 
+<span class="hljs-comment">//&#x5FC5;&#x987B;&#x5728;&#x7F51;&#x9875;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x8F93;&#x51FA;&#x7684;&#x65F6;&#x5019;&#x6267;&#x884C;</span>
+
+<span class="hljs-meta">&lt;?</span> php
+    $Var = <span class="hljs-string">&quot;hello php&quot;</span>;
+    $post = <span class="hljs-string">&quot;receive.php?Name=&quot;</span> . $Var;
+    header(<span class="hljs-string">&quot;location: $post&quot;</span>);
+<span class="hljs-meta">?&gt;</span>
+</code></pre>
+<ul>
+<li>&#x5229;&#x7528;meta</li>
+</ul>
+<pre><code class="lang-php"><span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;meta http-equiv=refresh content=&apos;0; url=&#x7F51;&#x5740; &apos;&gt;&quot;</span>; 
+<span class="hljs-comment">//&#x6CA1;&#x6709;&#x65B9;&#x6CD5;&#x4E00;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x524D;&#x9762;&#x6709;&#x8F93;&#x51FA;&#xFF0C;&#x5219;&#x8F93;&#x51FA;&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x95EA;&#x70C1;&#x4E00;&#x4E0B;&#x7136;&#x540E;&#x8FDB;&#x5165;&#x8DF3;&#x8F6C;&#x5230;&#x7684;&#x9875;&#x9762;&#x3002;</span>
+
+$post=<span class="hljs-string">&quot;guoqing.php?id=&quot;</span>.urlencode(<span class="hljs-string">&quot;$id&quot;</span>) .<span class="hljs-string">&quot;&amp;name=&quot;</span>.urlencode($name);
+<span class="hljs-comment">//&#x52A0;urlencode()&#x51FD;&#x6570;&#x5728;&#x5730;&#x5740;&#x680F;&#x5219;&#x4E0D;&#x663E;&#x793A;$a&#x53D8;&#x91CF;&#x7684;&#x4E2D;&#x6587;&#x771F;&#x5B9E;&#x5185;&#x5BB9;&#xFF0C;&#x7528;&#xFF05;&#x2026;&#x2026;&#xFF05;&#x2026;&#x2026;&#x6765;&#x8868;&#x793A;&#x3002;</span>
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;meta http-equiv=refresh content=&apos;0; url=$post&apos;&gt;&quot;</span>; <span class="hljs-comment">//&#x9875;&#x9762;&#x8DF3;&#x8F6C;&#x8BED;&#x53E5;&#x8FD9;&#x6837;&#x53EF;&#x5B9E;&#x73B0;&#x9875;&#x9762;&#x4F20;&#x503C;</span>
+</code></pre>
+<ul>
+<li>&#x5229;&#x7528;Javascript&#x8BED;&#x8A00; </li>
+</ul>
+<pre><code class="lang-php"><span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;script language=&apos;javascript&apos;&gt;&quot;</span>; 
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot; location=&apos;&#x7F51;&#x5740;&apos;;&quot;</span>; 
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;/script&gt;&quot;</span>;
+</code></pre>
 
                                 
                                 </section>
@@ -487,7 +521,7 @@ ob_clean()&#xFF1A;&#x5173;&#x95ED;&#x7F13;&#x51B2;&#x533A;</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"section1","level":"1.2.1","depth":2,"next":{"title":"第2章 数组","level":"1.3","depth":1,"path":"chapter2/README.md","ref":"chapter2/README.md","articles":[{"title":"section1","level":"1.3.1","depth":2,"path":"chapter2/section1.md","ref":"chapter2/section1.md","articles":[]}]},"previous":{"title":"第1章 PHP基础","level":"1.2","depth":1,"path":"chapter1/README.md","ref":"chapter1/README.md","articles":[{"title":"section1","level":"1.2.1","depth":2,"path":"chapter1/section1.md","ref":"chapter1/section1.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/section1.md","mtime":"2016-06-23T13:08:03.247Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-06-23T12:20:43.559Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"section1","level":"1.2.1","depth":2,"next":{"title":"第2章 数组","level":"1.3","depth":1,"path":"chapter2/README.md","ref":"chapter2/README.md","articles":[{"title":"section1","level":"1.3.1","depth":2,"path":"chapter2/section1.md","ref":"chapter2/section1.md","articles":[]}]},"previous":{"title":"第1章 PHP基础","level":"1.2","depth":1,"path":"chapter1/README.md","ref":"chapter1/README.md","articles":[{"title":"section1","level":"1.2.1","depth":2,"path":"chapter1/section1.md","ref":"chapter1/section1.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/section1.md","mtime":"2016-06-23T14:25:52.516Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-06-23T12:20:43.559Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

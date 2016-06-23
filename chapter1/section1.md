@@ -21,6 +21,7 @@
 * var_dump($array):输出类型+值
 
 * 表单
+
 ```php
 <form action = "a.php" method = "get">
 	<input type = "test" name = "username"/>
@@ -28,6 +29,7 @@
 	<input type = "submit" name = "submit" value = "OK"/>
 </form>
 ```
+
 ```php
 <?php
 	echo "<form action = 'a.php' method = 'get'>";
@@ -45,6 +47,7 @@
 
 
 * isset()函数是否有值
+
 ```php
 if(isset($_GET["username"]))
 {...}
@@ -55,11 +58,13 @@ if(isset($_GET["username"]))
 
 * include函数<br/>
   当前目录下有一个文档a.msp/.txt
+
 ```php
 include("a.msp");//引用目录下的a.php
 ```
 
 * .表示字符串连接，不能用+
+
 ```php
 $a = "a"."b";
 echo $a;
@@ -67,11 +72,45 @@ echo $a;
 ```
 
 * ?代表值的传递，以get方式传
+
 ```php
 <a href = "get.php?tag=1">a</a>
 ```
 
 * @表示有错可以忽略
+
 ```php
 @$_GET["keywords"];
+```
+
+###### PHP页面跳转
+
+ * 使用PHP自带函数 
+
+```php
+Header("Location: 网址 "); 
+//必须在网页没有任何输出的时候执行
+
+<? php
+	$Var = "hello php";
+	$post = "receive.php?Name=" . $Var;
+	header("location: $post");
+?>
+```
+ * 利用meta
+
+```php
+echo "<meta http-equiv=refresh content='0; url=网址 '>"; 
+//没有方法一的限制，但是如果前面有输出，则输出的内容会闪烁一下然后进入跳转到的页面。
+
+$post="guoqing.php?id=".urlencode("$id") ."&name=".urlencode($name);
+//加urlencode()函数在地址栏则不显示$a变量的中文真实内容，用％……％……来表示。
+echo "<meta http-equiv=refresh content='0; url=$post'>"; //页面跳转语句这样可实现页面传值
+```
+ * 利用Javascript语言 
+
+```php
+echo "<script language='javascript'>"; 
+echo " location='网址';"; 
+echo "</script>";
 ```
