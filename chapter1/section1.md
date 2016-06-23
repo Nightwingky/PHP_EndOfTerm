@@ -58,3 +58,20 @@ if(isset($_GET["username"]))
 ```php
 include("a.msp");//引用目录下的a.php
 ```
+
+* .表示字符串连接，不能用+
+```php
+$a = "a"."b";
+echo $a;
+//输出结果为"ab"
+```
+
+* ?代表值的传递，以get方式传
+```php
+<a href = "get.php?tag=1">a</a>
+```
+
+* @表示有错可以忽略
+```php
+@$_GET["keywords"];
+```
