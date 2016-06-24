@@ -10,8 +10,8 @@
 
 ```php
 header("content-type: image/png");
-$img=imagecreatetruecolor(100, 100);
-$red=imagecolorallocate($img, 0xFF, 0x00, 0x00);
+$img = imagecreatetruecolor(100, 100);
+$red = imagecolorallocate($img, 0xFF, 0x00, 0x00);
 imagefill($img, 0, 0, $red);
 imagepng($img);
 imagedestroy($img);
