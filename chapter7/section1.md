@@ -28,6 +28,8 @@
 
 ###### mysql_close()关闭连接
 
+* mysql_close($con);
+
 ```php
 <?php
   $con = mysql_connect("localhost","peter","abc123");
