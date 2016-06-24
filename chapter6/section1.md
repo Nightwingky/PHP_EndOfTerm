@@ -4,9 +4,9 @@
 
 #### GD库（Graphic Device）
 
->PHP的GD库是用来处理图形的扩展库，通过GD库提供的一系列API，可以对图像进行处理或者直接生成新的图片。
->PHP除了能进行文本处理以外，通过GD库，可以对JPG、PNG、GIF、SWF等图片进行处理。GD库常用在图片加水印，验证码生成等方面。
->PHP默认已经集成了GD库，只需要在安装的时候开启就行。
+> PHP的GD库是用来处理图形的扩展库，通过GD库提供的一系列API，可以对图像进行处理或者直接生成新的图片。
+> PHP除了能进行文本处理以外，通过GD库，可以对JPG、PNG、GIF、SWF等图片进行处理。GD库常用在图片加水印，验证码生成等方面。
+> PHP默认已经集成了GD库，只需要在安装的时候开启就行。
 
 ```php
 header("content-type: image/png");
@@ -53,6 +53,20 @@ imagestring($img, 5, 0, 0, "Hello world", $red);
 header("content-type: image/png");
 imagepng($img);
 imagedestroy($img);
+```
+
+#### 给图片添加水印
+
+> 给图片添加水印的方法一般有两种，一种是在图片上面加上一个字符串，另一种是在图片上加上一个logo或者其他的图片。
+```php
+//通过imagecreatefromjpeg直接从图片文件创建图像。
+$im = imagecreatefromjpeg($filename);
+//创建图像对象以后，就可以通过前面的GD函数，绘制字符串到图像上。
+//如果要加的水印是一个logo图片，那么就需要再建立一个图像对象，然后通过GD函数imagecopy将logo的图像复制到源图像中。
+$logo = imagecreatefrompng($filename);
+imagecopy($im, $logo, 15, 15, 0, 0, $width, $height);
+//当将logo图片复制到原图片上以后，将加水印后的图片输出保存就完成了加水印处理。
+imagejpeg($im, $filename);
 ```
 
 #### 一个完整的图像处理程序——验证码
