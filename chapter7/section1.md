@@ -26,7 +26,7 @@
 ?>
 ```
 
-* mysql_close()关闭连接
+###### mysql_close()关闭连接
 
 ```php
 <?php
