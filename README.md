@@ -6,4 +6,5 @@
 > 2016 Summer
 
 本书始写于2016-06-22,根据刘音老师的讲义及程序整理<br/>
+部分代码引用自[w3school](http://www.w3school.com.cn/)<br/>
 版权所有,北京林业大学内转载请注明原作者[阙琨洋](https://github.com/Nightwingky/)
