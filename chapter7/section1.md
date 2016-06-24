@@ -61,10 +61,10 @@ CREATE DATABASE database_name;
 //CREATE TABLE 用于在 MySQL 中创建数据库表。
 CREATE TABLE table_name
 (
-column_name1 data_type,
-column_name2 data_type,
-column_name3 data_type,
-.......
+  column_name1 data_type,
+  column_name2 data_type,
+  column_name3 data_type,
+  .......
 );
 ```
 
