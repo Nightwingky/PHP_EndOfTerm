@@ -187,3 +187,74 @@ Age: <input type="text" name="age" />
   mysql_close($con);
 ?>
 ```
+
+###### SELECT
+
+```sql
+--SELECT 语句用于从数据库中选取数据。
+SELECT column_name(s) FROM table_name
+```
+
+```php
+<?php
+  $con = mysql_connect("localhost","peter","abc123");
+  if (!$con)
+  {
+    die('Could not connect: ' . mysql_error());
+  }
+
+  mysql_select_db("my_db", $con);
+
+  $result = mysql_query("SELECT * FROM Persons");
+
+  //使用 mysql_fetch_array() 函数以数组的形式从记录集返回第一行。
+  //每个随后对 mysql_fetch_array() 函数的调用都会返回记录集中的下一行。
+  echo "<table border='1'>
+  <tr>
+  <th>Firstname</th>
+  <th>Lastname</th>
+  </tr>";
+
+  while($row = mysql_fetch_array($result))
+  {
+    echo "<tr>";
+    echo "<td>" . $row['FirstName'] . "</td>";
+    echo "<td>" . $row['LastName'] . "</td>";
+    echo "</tr>";
+  }
+  echo "</table>";
+
+  mysql_close($con);
+?>
+```
+
+* 在 HTML 表格中显示结果
+下面的例子选取的数据与上面的例子相同，但是将把数据显示在一个 HTML 表格中：
+<?php
+$con = mysql_connect("localhost","peter","abc123");
+if (!$con)
+  {
+  die('Could not connect: ' . mysql_error());
+  }
+
+mysql_select_db("my_db", $con);
+
+$result = mysql_query("SELECT * FROM Persons");
+
+echo "<table border='1'>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+</tr>";
+
+while($row = mysql_fetch_array($result))
+  {
+  echo "<tr>";
+  echo "<td>" . $row['FirstName'] . "</td>";
+  echo "<td>" . $row['LastName'] . "</td>";
+  echo "</tr>";
+  }
+echo "</table>";
+
+mysql_close($con);
+?>
