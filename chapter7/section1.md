@@ -229,3 +229,28 @@ SELECT column_name(s) FROM table_name
 ?>
 ```
 
+###### DELETE
+
+```sql
+--DELETE FROM 语句用于从数据库表中删除记录。
+
+DELETE FROM table_name
+WHERE column_name = some_value
+```
+
+```php
+<?php
+  $con = mysql_connect("localhost","peter","abc123");
+  if (!$con)
+  {
+    die('Could not connect: ' . mysql_error());
+  }
+
+  mysql_select_db("my_db", $con);
+
+  mysql_query("DELETE FROM Persons WHERE LastName='Griffin'");
+
+  mysql_close($con);
+?>
+```
+
