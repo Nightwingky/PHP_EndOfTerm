@@ -89,7 +89,7 @@ CREATE TABLE table_name
 ?>
 ```
 
-```
+```php
 <?php
   $con = mysql_connect("localhost","peter","abc123");
   if (!$con)
@@ -119,4 +119,5 @@ CREATE TABLE table_name
 
   mysql_close($con);
 ?>
+```
 
