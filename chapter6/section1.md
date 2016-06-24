@@ -57,7 +57,8 @@ imagedestroy($img);
 
 #### 给图片添加水印
 
-> 给图片添加水印的方法一般有两种，一种是在图片上面加上一个字符串，另一种是在图片上加上一个logo或者其他的图片。
+* 给图片添加水印的方法一般有两种，一种是在图片上面加上一个字符串，另一种是在图片上加上一个logo或者其他的图片。
+
 ```php
 //通过imagecreatefromjpeg直接从图片文件创建图像。
 $im = imagecreatefromjpeg($filename);
