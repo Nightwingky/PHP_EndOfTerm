@@ -41,3 +41,83 @@
   mysql_close($con);
 ?>
 ```
+
+#### Mysql语句的执行
+
+###### 选择数据库。
+
+* mysql_select_db("my_db", $con);
+
+###### 执行MySQL语句
+
+* mysql_query("str", $con)
+
+###### CREATE
+
+* CREATE DATABASE 语句用于在 MySQL 中创建数据库。
+
+* CREATE DATABASE database_name
+
+```php
+<?php
+  $con = mysql_connect("localhost","peter","abc123");
+  if (!$con)
+  {
+    die('Could not connect: ' . mysql_error());
+  }
+
+  if (mysql_query("CREATE DATABASE my_db",$con))
+  {
+    echo "Database created";
+  }
+  else
+  {
+    echo "Error creating database: " . mysql_error();
+  }
+
+  mysql_close($con);
+?>
+```
+创建表
+CREATE TABLE 用于在 MySQL 中创建数据库表。
+语法
+CREATE TABLE table_name
+(
+column_name1 data_type,
+column_name2 data_type,
+column_name3 data_type,
+.......
+)
+为了执行此命令，我必须向 mysql_query() 函数添加 CREATE TABLE 语句。
+例子
+下面的例子展示了如何创建一个名为 "Persons" 的表，此表有三列。列名是 "FirstName", "LastName" 以及 "Age"：
+<?php
+$con = mysql_connect("localhost","peter","abc123");
+if (!$con)
+  {
+  die('Could not connect: ' . mysql_error());
+  }
+
+// Create database
+if (mysql_query("CREATE DATABASE my_db",$con))
+  {
+  echo "Database created";
+  }
+else
+  {
+  echo "Error creating database: " . mysql_error();
+  }
+
+// Create table in my_db database
+mysql_select_db("my_db", $con);
+$sql = "CREATE TABLE Persons 
+(
+FirstName varchar(15),
+LastName varchar(15),
+Age int
+)";
+mysql_query($sql,$con);
+
+mysql_close($con);
+?>
+
