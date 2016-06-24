@@ -39,3 +39,18 @@ imagepng($img, 'img.png');
 //调用imagedestroy释放该图片占用的内存。
 imagedestroy($img);
 ```
+
+#### 绘制文字
+
+```php
+$img = imagecreatetruecolor(100, 100);
+$red = imagecolorallocate($img, 0xFF, 0x00, 0x00);
+//使用imagestring函数来进行文字的绘制
+//imagestring ( resource $image , int $font , int $x , int $y , string $s , int $col )
+//通过$font来设置字体的大小，x,y设置文字显示的位置，$s是要绘制的文字,$col是文字的颜色。
+imagestring($img, 5, 0, 0, "Hello world", $red);
+
+header("content-type: image/png");
+imagepng($img);
+imagedestroy($img);
+```
