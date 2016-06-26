@@ -24,7 +24,7 @@
 
 ```php
 <form action = "a.php" method = "get">
-	<input type = "test" name = "username"/>
+	<input type = "text" name = "username"/>
 	<input type = "password" name = "pwd"/>
 	<input type = "submit" name = "submit" value = "OK"/>
 </form>
