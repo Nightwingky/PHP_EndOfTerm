@@ -33,7 +33,7 @@
 ```php
 <?php
 	echo "<form action = 'a.php' method = 'get'>";
-	echo "<input type = 'test' name = 'username'/>";
+	echo "<input type = 'text' name = 'username'/>";
 	echo "<input type = 'password' name = 'pwd'/>";
 	echo "<input type = 'submit' name = 'submit' value = 'OK'/>";
 	echo "</form>";
